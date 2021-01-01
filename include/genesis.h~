@@ -1,0 +1,8 @@
+#ifndef GENESIS_H
+#define GENESIS_H
+
+namespace genesis{
+  
+}
+
+#endif // GENSIS_H
