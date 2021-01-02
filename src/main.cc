@@ -18,11 +18,7 @@ template <typename T>
 void get_verse(T x, int a_chapter, int a_verse){
   std::cout << x.book_name
             << " "
-            << x.books[a_chapter].chapter
-            << ":"
-            << x.books[a_verse].verse
-            << " "
-            << x.books[a_verse].verse_text
+            << x.books[a_chapter][a_verse].verse_text
             << std::endl;
 }
 
@@ -44,8 +40,9 @@ int main(){
   Genesis gen;
   int chapter = 1;
   int verse = 1;
-
-  get_verse<Genesis>(gen, chapter -1, verse -1);
+  const int offset = 1;
+  get_verse<Genesis>(gen, chapter -offset, verse -offset);
+  get_verse<Genesis>(gen, 2 -offset, 1-offset);
   // SQL TESTING
   const char *sql_statement = "SELECT * from kjv";
   // rc = sqlite3_exec(db, sql_statement, callback, (void*)data, &zErrMsg);
