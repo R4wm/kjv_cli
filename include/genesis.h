@@ -2,16 +2,10 @@
 #define GENESIS_H
 
 #include <string>
+#include "book.h"
 
 // THIS FILE WILL HAVE TO BE GENERATED FROM SQL QUERIES
-class Genesis{
-
-  struct A{
-    const int chapter;
-    const int verse;
-    const std::string verse_text;
-  };
-
+class Genesis: Book{
 public:
   const std::string book_name = "GENESIS";
   int something = 1;
