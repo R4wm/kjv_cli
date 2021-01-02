@@ -5,7 +5,7 @@
 #include "book.h"
 
 // THIS FILE WILL HAVE TO BE GENERATED FROM SQL QUERIES
-class Genesis: Book{
+class Genesis: public Book{
 public:
   const std::string book_name = "GENESIS";
   int something = 1;

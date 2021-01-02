@@ -1,5 +1,7 @@
 #include "book.h"
 
+const int stuff = 1;
+
 Book::Book(){
   printf("NOthing book!\n");
 }
