@@ -2,6 +2,69 @@
 #include <sqlite3.h>
 #include "book.h"
 #include "genesis.h"
+#include "exodus.h"
+#include "leviticus.h"
+#include "numbers.h"
+#include "deuteronomy.h"
+#include "joshua.h"
+#include "judges.h"
+#include "ruth.h"
+#include "1samuel.h"
+#include "2samuel.h"
+#include "1kings.h"
+#include "2kings.h"
+#include "1chronicles.h"
+#include "2chronicles.h"
+#include "ezra.h"
+#include "nehemiah.h"
+#include "esther.h"
+#include "job.h"
+#include "psalms.h"
+#include "proverbs.h"
+#include "ecclesiastes.h"
+#include "isaiah.h"
+#include "jeremiah.h"
+#include "lamentations.h"
+#include "ezekiel.h"
+#include "daniel.h"
+#include "hosea.h"
+#include "joel.h"
+#include "amos.h"
+#include "obadiah.h"
+#include "jonah.h"
+#include "micah.h"
+#include "nahum.h"
+#include "habakkuk.h"
+#include "zephaniah.h"
+#include "haggai.h"
+#include "zechariah.h"
+#include "malachi.h"
+#include "matthew.h"
+#include "mark.h"
+#include "luke.h"
+#include "john.h"
+#include "acts.h"
+#include "romans.h"
+#include "1corinthians.h"
+#include "2corinthians.h"
+#include "galatians.h"
+#include "ephesians.h"
+#include "philippians.h"
+#include "colossians.h"
+#include "1thessalonians.h"
+#include "2thessalonians.h"
+#include "1timothy.h"
+#include "2timothy.h"
+#include "titus.h"
+#include "philemon.h"
+#include "hebrews.h"
+#include "james.h"
+#include "1peter.h"
+#include "2peter.h"
+#include "1john.h"
+#include "2john.h"
+#include "3john.h"
+#include "jude.h"
 
 static int callback(void *data, int argc, char **argv, char **azColName){
   int l_counter = 0;
@@ -35,12 +98,14 @@ int main(){
   // just a POC //
   ////////////////
   Genesis gen;
+  Haggai hag;
   int chapter = 1;
   int verse = 1;
   const int offset = 1;
   get_verse<Genesis>(gen, chapter -offset, verse -offset);
-  get_verse<Genesis>(gen, 2 -offset, 1-offset);
-  
+  get_verse<Genesis>(gen, 2 -offset, 2-offset);
+  printf("HAGGAI text!\n");
+  get_verse<Haggai>(hag, 2-offset, 2-offset);
   /////////////////
   // SQL TESTING //
   /////////////////
