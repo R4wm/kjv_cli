@@ -29,9 +29,18 @@ c.execute('SELECT book, chapter, verse, text from kjv')
 filehandler = open('/tmp/bible.h', 'a')
 counter = 0
 for row in c:
-    l_obj = 'Book{\"%s\", %d, %d, \"%s\"},'%(row[0], row[1], row[2], row[3])
+    # if counter == 11:
+    #     break;
+    l_obj = 'Book{\"%s\", %d, %d, \"%s\"}'%(row[0], row[1], row[2], row[3])
+    # if counter != 10:
+    if counter != 31101:
+        l_obj += ","
     filehandler.write(l_obj)
     counter+=1
-    
+
+# Add closing block
+filehandler.write('};') # close canon iniitialization block
+filehandler.write('}') # close top level "bible" block     
+
 print("counter: ", counter)
 filehandler.close()
