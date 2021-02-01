@@ -13,7 +13,7 @@ def create_header_file():
     l_template = '''
 #include "book.h"
 namespace bible{
-    Book canon[31101] = {
+    Book canon[31102] = {
 
 '''
     with open("/tmp/bible.h", 'w') as b:
